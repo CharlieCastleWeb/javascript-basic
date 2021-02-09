@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basic</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        /*
+        /////////////  NIVELL 1  /////////////
+        */
+
+        // Exercici 1
+        console.log("Hola Mundo");
+
+        //Exercici 2
+        alert("Carlos Castillo");
+
+        //Exercici 3
+        let nom = "Carlos";
+        let cognom = "Castillo";
+        console.log(nom+" "+cognom);
+
+        //Exercici 4
+        let num1 = 8;
+        let num2 = 5;
+        console.log("La suma de "+num1+" i "+num2+" és "+(num1+num2));
+
+        //Exercici 5
+        let notaExamen = 4.6;
+
+        if (notaExamen>=5) {
+            alert("Enhroabona, has aprovat l'examen amb un "+notaExamen);
+        } else {
+            alert("Ohh has suspès l'examen amb un  "+notaExamen);
+        }
+
+        //Exercici 6
+        let frase1 = "Tinc un cotxe de color verd";
+        console.log(frase1);
+        
+        let frase2 = frase1.replace("verd", "blau");
+        let frase3 = frase2.replace(/o/g,"u");
+        console.log(frase3);
+
+        //Exercici 7
+        let llistat = ["taula", "cadira", "ordinador", "llibreta"];
+
+        for ( let i = 0; i<llistat.length; i++) {
+            console.log("L'objecte "+llistat[i]+" està a la posició "+i+".");
+        }
+
+        //Exercici 8
+        function calculadora(operador, valor1, valor2) {
+            if (operador === "suma") {
+                return valor1 + valor2;
+            } else if (operador === "resta") {
+                return valor1 - valor2;
+            } else if (operador === "multiplicacio") {
+                return valor1 * valor2;
+            }
+        }
+
+        var resultat1 = (calculadora("resta", 40, 20));
+        console.log(resultat1);
+
+        /*
+        /////////////  NIVELL 2  /////////////
+        */
+
+        function calculadoraCompleta(operador, valor1, valor2) {
+            if (operador === "sumar") {
+                return valor1 + valor2;
+            } else if (operador === "restar") {
+                return valor1 - valor2;
+            } else if (operador === "multiplicar") {
+                return valor1 * valor2;
+            }
+            else if (operador === "dividir") {
+                if (valor2 === 0) {
+                    return "Resultat infinit";
+                } else {
+                    return valor1 / valor2;
+                }
+                
+            }
+        }
+
+        var resultat2 = (calculadoraCompleta("dividir", 40, 0));
+        console.log(resultat2);
+
+    </script>
+</body>
+</html>
